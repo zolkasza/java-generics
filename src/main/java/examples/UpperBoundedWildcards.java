@@ -15,6 +15,8 @@ public class UpperBoundedWildcards {
         printNumbers(list3);
     }
 
+    // ? extends Number -> olyan class ami a Numberből származik le vagy a Number maga
+    // csak egyet lehet beírni
     static void printNumbers(List<? extends Number> list) {
         list.forEach(e -> {
             System.out.println(e.getClass().getName());

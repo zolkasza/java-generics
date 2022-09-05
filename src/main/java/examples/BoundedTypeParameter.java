@@ -13,9 +13,6 @@ public class BoundedTypeParameter {
         );
     }
 
-    interface A {}
-    interface B {}
-
     static <T extends Comparable<T>> int countGreaterThan(
             T[] numbers,
             T number) {
@@ -26,5 +23,14 @@ public class BoundedTypeParameter {
             }
         }
         return count;
+    }
+
+    // Multiple Bounds
+    interface A {}
+    interface B {}
+
+    // sorrend: mindig extends, interfacenél is. Az első helyen class (csak 1 db lehet!!) utána jönnek az interfacek
+    static <T extends A & B> int asd(T sg) {
+        return 5;
     }
 }

@@ -13,6 +13,8 @@ public class LowerBoundedWildcards {
         printNumbers(list3);
     }
 
+    // ? super Integer -> olyan class amiBŐL az Integer származik le, vagy az Integer maga
+    // csak egyet lehet beírni
     static void printNumbers(List<? super Integer> list) {
         list.forEach(e -> {
             System.out.println(e.getClass().getName());
